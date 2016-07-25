@@ -12,56 +12,42 @@
       </application>
    </extension>
    <extension
-         point="org.eclipse.ui.perspectives">
-      <perspective
-            name="Perspective"
-            class="com.in.ideas.Perspective"
-            id="com.in.ideas.perspective">
-      </perspective>
-   </extension>
-   <extension
-         point="org.eclipse.ui.views">
-      <view
-            name="View"
-            class="com.in.ideas.View"
-            id="com.in.ideas.view">
-      </view>
-   </extension>
-   <extension
-         point="org.eclipse.ui.perspectiveExtensions">
-      <perspectiveExtension
-            targetID="*">
-         <view
-               standalone="true"
-               minimized="false"
-               relative="org.eclipse.ui.editorss"
-               relationship="left"
-               id="com.in.ideas.view">
-         </view>
-      </perspectiveExtension>
-   </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu">
-         <menu
-               label="File">
-            <command
-                  commandId="org.eclipse.ui.file.exit"
-                  label="Exit">
-            </command>
-         </menu>
-      </menuContribution>
-   </extension>
-   <extension
-         id="product"
+         id="Product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="com.in.ideas.application"
-            name="RCP Application">
+            application="org.eclipse.ui.ide.workbench"
+            name="Innovative Ideas">
+         <property
+               name="appName"
+               value="Innovative Ideas">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/Help.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Innovative Ideas&#x0A;&#x0A;Author: Sagnick Banerjee">
+         </property>
          <property
                name="windowImages"
-               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+               value="icons/I.png,icons/I.png,icons/I.png,icons/I.png,icons/I.png,icons/I.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="00FF00">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
